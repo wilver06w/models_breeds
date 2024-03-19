@@ -53,7 +53,7 @@ class Countries {
             keyValue: 'pasaporte',
           ),
         ],
-        mapsKey: 'AIzaSyCtMJW8jxSydnrhZ6-B9KES4uJf-CUQDR4',
+        mapsKey: '',
         priceSettings: PriceFormatterSettings(
           symbol: '\$',
           thousandSeparator: '.',
