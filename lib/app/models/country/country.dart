@@ -4,7 +4,6 @@ import 'package:equatable/equatable.dart';
 import 'documents.dart';
 import 'lat_long.dart';
 import 'loca_le.dart';
-import 'package:utils_breeds/utils/helpers/price_formatter/utils/price_formatter_settings.dart';
 
 class Country extends Equatable {
   const Country({
@@ -26,7 +25,6 @@ class Country extends Equatable {
     this.mapsKey,
     this.centerPoint,
     this.enabled = true,
-    this.priceSettings,
   });
   final String? code;
   final String? name;
@@ -46,7 +44,6 @@ class Country extends Equatable {
   final List<DocumentType>? clientDocuments;
   final String? mapsKey;
   final LatLong? centerPoint;
-  final PriceFormatterSettings? priceSettings;
 
   Country copyWith({
     String? code,
@@ -69,7 +66,6 @@ class Country extends Equatable {
     List<DocumentType>? clientDocuments,
     String? mapsKey,
     LatLong? centerPoint,
-    PriceFormatterSettings? priceSettings,
   }) {
     return Country(
       code: code ?? this.code,
@@ -89,7 +85,6 @@ class Country extends Equatable {
       clientDocuments: clientDocuments ?? this.clientDocuments,
       mapsKey: mapsKey ?? this.mapsKey,
       centerPoint: centerPoint ?? this.centerPoint,
-      priceSettings: priceSettings ?? this.priceSettings,
     );
   }
 
@@ -118,11 +113,6 @@ class Country extends Equatable {
       centerPoint: json['center_point'] == null
           ? null
           : LatLong.fromJson(json['center_point'] as Map<String, dynamic>),
-      priceSettings: json['price_settings'] == null
-          ? null
-          : PriceFormatterSettings.fromJson(
-              json['price_settings'] as Map<String, dynamic>,
-            ),
     );
   }
 
@@ -184,7 +174,6 @@ class Country extends Equatable {
       mapsKey,
       centerPoint,
       enabled,
-      priceSettings,
     ];
   }
 }

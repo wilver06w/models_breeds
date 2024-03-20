@@ -2,8 +2,6 @@ import 'package:models_breeds/app/models/country/country.dart';
 import 'package:models_breeds/app/models/country/documents.dart';
 import 'package:models_breeds/app/models/country/lat_long.dart';
 import 'package:models_breeds/app/models/country/loca_le.dart';
-import 'package:utils_breeds/utils/helpers/price_formatter/utils/compact_format_type.dart';
-import 'package:utils_breeds/utils/helpers/price_formatter/utils/price_formatter_settings.dart';
 
 class Countries {
   const Countries({
@@ -54,14 +52,6 @@ class Countries {
           ),
         ],
         mapsKey: '',
-        priceSettings: PriceFormatterSettings(
-          symbol: '\$',
-          thousandSeparator: '.',
-          decimalSeparator: '.',
-          symbolAndNumberSeparator: '',
-          fractionDigits: 0,
-          compactFormatType: CompactFormatType.long,
-        ),
       ),
     ];
   }
